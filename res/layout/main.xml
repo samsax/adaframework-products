@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+  A project sample for AdaFramework (http://www.adaframework.com/)
+  
+  Copyright (C) 2012 Androcode
+  <http://www.androcode.es>
+  
+  This project is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or 
+  (at your option) any later version.
+  
+  You should have received a copy of the GNU General Public License
+  along with this project.  If not, see <http://www.gnu.org/licenses/>.
+ -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:onClick="viewCategories"
+        android:text="@string/categories" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:onClick="newCategory"
+        android:text="@string/new_category" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:onClick="viewProducts"
+        android:text="@string/products" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:onClick="newProduct"
+        android:text="@string/new_product" />
+
+</LinearLayout>
