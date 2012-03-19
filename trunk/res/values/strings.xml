@@ -15,7 +15,7 @@
  -->
 <resources>
 
-    <string name="app_name">adaframework-customers</string>
+    <string name="app_name">adaframework-products</string>
     
     <string name="categories">Categories</string>
     <string name="products">Products</string>
