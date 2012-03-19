@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+  A project sample for AdaFramework (http://www.adaframework.com/)
+  
+  Copyright (C) 2012 Androcode
+  <http://www.androcode.es>
+  
+  This project is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or 
+  (at your option) any later version.
+  
+  You should have received a copy of the GNU General Public License
+  along with this project.  If not, see <http://www.gnu.org/licenses/>.
+ -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:id="@+id/buttons"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+        <Button 
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:padding="4dp"
+            android:onClick="save"
+            android:text="@android:string/ok" />
+        <Button 
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:padding="4dp"
+            android:onClick="cancel"
+            android:text="@android:string/cancel" />
+    </LinearLayout>
+    
+    <LinearLayout 
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:layout_above="@+id/botones"
+	    android:orientation="vertical" >
+	
+	    <TextView
+	        android:id="@+id/edit_title"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:gravity="center"
+	        android:layout_margin="4dp"
+	        style="@android:style/TextAppearance.DeviceDefault.Large"	        
+	        android:text="@string/new_product" />
+	    
+	    <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/name" />
+	
+	    <EditText
+	        android:id="@+id/name"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_margin="5dp"
+	        android:inputType="text" />
+	
+	    <Button
+	        android:id="@+id/category"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_margin="4dp"
+	        android:onClick="changeProductCategory"
+	        android:text="@string/no_category" />
+	    
+	    <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/quantity_per_unit" />
+	
+	    <EditText
+	        android:id="@+id/quantity"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_margin="5dp"
+	        android:inputType="number" />
+	    
+	    <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/unit_price" />
+	
+	    <EditText
+	        android:id="@+id/price"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_margin="5dp"
+	        android:inputType="numberDecimal" />
+	    
+	    <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/stock" />
+	
+	    <EditText
+	        android:id="@+id/stock"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_margin="5dp"
+	        android:inputType="number" />
+	
+	</LinearLayout>
+
+</RelativeLayout>
