@@ -63,8 +63,16 @@ public class EditCategoryActivity extends Activity {
             category.setName(newName);
             category.setDescription(description.getText().toString());
             // Salvamos
-            saveCategory();
-            setResult(RESULT_OK);
+            ApplicationDataContext dataContext = getApplicationDataContext();
+            if (dataContext != null) {
+                try {                
+                    dataContext.categoryDao.add(category);
+                    dataContext.categoryDao.save();
+                    setResult(RESULT_OK);
+                } catch (Exception e) {
+                    Log.e("Androcode", "Error guardando categoria: " + e.getMessage());
+                }
+            }
             finish();
         } else {
             Toast.makeText(this, R.string.error_empty_name, Toast.LENGTH_SHORT).show();
@@ -73,18 +81,6 @@ public class EditCategoryActivity extends Activity {
 
     public void cancel(View view) {
         finish();
-    }
-    
-    private void saveCategory() {
-        ApplicationDataContext dataContext = getApplicationDataContext();
-        if (dataContext != null) {
-            try {                
-                dataContext.categoryDao.add(category);
-                dataContext.categoryDao.save();
-            } catch (Exception e) {
-                Log.e("Androcode", "Error guardando categoria: " + e.getMessage());
-            }
-        }
     }
     
     private ApplicationDataContext getApplicationDataContext() {
