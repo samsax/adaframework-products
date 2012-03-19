@@ -19,25 +19,26 @@ import com.desandroid.framework.ada.Entity;
 import com.desandroid.framework.ada.annotations.Table;
 import com.desandroid.framework.ada.annotations.TableField;
 
-@Table(name="product")
+@Table(name = "product")
 public class Product extends Entity {
-	
-	@TableField(name="name", datatype=DATATYPE_TEXT, required=true)
-	public String name;
-	@TableField(name="category", datatype=DATATYPE_ENTITY_REFERENCE, required=false)
-	public Category category;
-	@TableField(name="quantity_per_unit", datatype=DATATYPE_INTEGER, required=true)
-	public int quantityPerUnit;
-	@TableField(name="unit_price", datatype=DATATYPE_DOUBLE, required=true)
-	public double unitPrice;
-	@TableField(name="units_in_stock", datatype=DATATYPE_INTEGER, required=true)
-	public int unitsInStock;
 
-	public Product() {
+    @TableField(name = "name", datatype = DATATYPE_TEXT, required = true)
+    public String name;
+    @TableField(name = "category", datatype = DATATYPE_ENTITY_REFERENCE, required = false)
+    public Category category;
+    @TableField(name = "quantity_per_unit", datatype = DATATYPE_INTEGER, required = true)
+    public int quantityPerUnit;
+    @TableField(name = "unit_price", datatype = DATATYPE_DOUBLE, required = true)
+    public double unitPrice;
+    @TableField(name = "units_in_stock", datatype = DATATYPE_INTEGER, required = true)
+    public int unitsInStock;
+
+    public Product() {
         super();
     }
 
-    public Product(String name, Category category, int quantityPerUnit, double unitPrice, int unitsInStock) {
+    public Product(String name, Category category, int quantityPerUnit,
+            double unitPrice, int unitsInStock) {
         super();
         this.name = name;
         this.category = category;
@@ -47,43 +48,43 @@ public class Product extends Entity {
     }
 
     public String getName() {
-		return name;
-	}
+        return name;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public Category getCategory() {
-		return category;
-	}
+    public Category getCategory() {
+        return category;
+    }
 
-	public void setCategory(Category category) {
-		this.category = category;
-	}
+    public void setCategory(Category category) {
+        this.category = category;
+    }
 
-	public int getQuantityPerUnit() {
-		return quantityPerUnit;
-	}
+    public int getQuantityPerUnit() {
+        return quantityPerUnit;
+    }
 
-	public void setQuantityPerUnit(int quantityPerUnit) {
-		this.quantityPerUnit = quantityPerUnit;
-	}
+    public void setQuantityPerUnit(int quantityPerUnit) {
+        this.quantityPerUnit = quantityPerUnit;
+    }
 
-	public double getUnitPrice() {
-		return unitPrice;
-	}
+    public double getUnitPrice() {
+        return unitPrice;
+    }
 
-	public void setUnitPrice(double unitPrice) {
-		this.unitPrice = unitPrice;
-	}
+    public void setUnitPrice(double unitPrice) {
+        this.unitPrice = unitPrice;
+    }
 
-	public int getUnitsInStock() {
-		return unitsInStock;
-	}
+    public int getUnitsInStock() {
+        return unitsInStock;
+    }
 
-	public void setUnitsInStock(int unitsInStock) {
-		this.unitsInStock = unitsInStock;
-	}
+    public void setUnitsInStock(int unitsInStock) {
+        this.unitsInStock = unitsInStock;
+    }
 
 }

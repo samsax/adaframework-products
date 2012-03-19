@@ -25,31 +25,26 @@ import es.androcode.adafw.products.model.Product;
 
 /**
  * Class for entities ObjectSet
+ * 
  * @author fedeproex
- *
+ * 
  */
 public class ApplicationDataContext extends ObjectContext {
-	
-	public ObjectSet<Category> categoryDao;
-	public ObjectSet<Product> productDao;
-	
-	/**
-	 * Constructor
-	 * @param pContext context
-	 * @throws Exception
-	 */
-	public ApplicationDataContext(Context pContext) throws Exception {
-		super(pContext);
-		this.categoryDao = new ObjectSet<Category>(Category.class, this);
-		this.productDao = new ObjectSet<Product>(Product.class, this);
-	}
 
-	public ObjectSet<Category> getCategoryDao() {
-		return categoryDao;
-	}
+    public ObjectSet<Category> categoryDao;
+    public ObjectSet<Product> productDao;
 
-	public ObjectSet<Product> getProductDao() {
-		return productDao;
-	}
+    /**
+     * Constructor
+     * 
+     * @param pContext
+     *            context
+     * @throws Exception
+     */
+    public ApplicationDataContext(Context pContext) throws Exception {
+        super(pContext);
+        this.categoryDao = new ObjectSet<Category>(Category.class, this);
+        this.productDao = new ObjectSet<Product>(Product.class, this);
+    }
 
 }

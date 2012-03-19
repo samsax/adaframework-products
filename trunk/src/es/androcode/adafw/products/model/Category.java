@@ -19,15 +19,15 @@ import com.desandroid.framework.ada.Entity;
 import com.desandroid.framework.ada.annotations.Table;
 import com.desandroid.framework.ada.annotations.TableField;
 
-@Table(name="category")
+@Table(name = "category")
 public class Category extends Entity {
-	
-	@TableField(name="name", datatype=DATATYPE_TEXT)
-	public String name;	
-	@TableField(name="description", datatype=DATATYPE_TEXT)
-	public String description;
-	
-	public Category() {
+
+    @TableField(name = "name", datatype = DATATYPE_TEXT, required = true)
+    public String name;
+    @TableField(name = "description", datatype = DATATYPE_TEXT, required = false)
+    public String description;
+
+    public Category() {
         super();
     }
 
@@ -38,19 +38,19 @@ public class Category extends Entity {
     }
 
     public String getName() {
-		return name;
-	}
-	
-	public void setName(String name) {
-		this.name = name;
-	}
-	
-	public String getDescription() {
-		return description;
-	}
-	
-	public void setDescription(String description) {
-		this.description = description;
-	}
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
 
 }

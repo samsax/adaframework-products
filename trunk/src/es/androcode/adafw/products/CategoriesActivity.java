@@ -35,6 +35,11 @@ import com.desandroid.framework.ada.Entity;
 import es.androcode.adafw.products.db.ApplicationDataContext;
 import es.androcode.adafw.products.model.Category;
 
+/**
+ * Actividad que muestra la lista de Categorías
+ * @author fedeproex
+ *
+ */
 public class CategoriesActivity extends ListActivity {
 
     private static final int REQUEST_EDIT = 1;
@@ -51,11 +56,15 @@ public class CategoriesActivity extends ListActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // Nos registramos para recibir eventos de pulsación larga
         registerForContextMenu(getListView());
         inflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
-        try {            
+        try {
+            // Creamos un objeto ApplicationDataContext
             appDataContext = new ApplicationDataContext(this);
+            // Rellenamos el DAO de categorías ordenándolo por la columna name
             appDataContext.categoryDao.fill("name");
+            // Creamos el adapter que utilizará el DAO
             adapter = new MyAdapter();
             setListAdapter(adapter);
             
@@ -66,13 +75,15 @@ public class CategoriesActivity extends ListActivity {
     
     @Override
     protected void onListItemClick(ListView l, View v, int position, long id) {
+        // Al pulsar nos vamos a la edición directamente
         Intent intent = new Intent(this, EditCategoryActivity.class);
         intent.putExtra(EditCategoryActivity.ID_CATEGORY, id);
         startActivityForResult(intent, REQUEST_EDIT);
     }
     
     @Override
-    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenuInfo menuInfo) {        
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenuInfo menuInfo) {
+        // Añadimos la opción de eliminar o editar
         menu.add(0, MENU_DELETE, 0, R.string.delete);
         menu.add(0, MENU_EDIT, 0, R.string.edit);
     }
@@ -113,6 +124,10 @@ public class CategoriesActivity extends ListActivity {
         }
     }
     
+    /**
+     * Método de ayuda que vuelve a consultar la base de datos
+     * y avisa al adapter de que los datos han cambiado
+     */
     private void reloadList() {
         try {
             appDataContext.categoryDao.fill("name");
@@ -122,6 +137,10 @@ public class CategoriesActivity extends ListActivity {
         }
     }
     
+    /**
+     * Adapter que utiliza el DAO para rellenar la lista
+     * 
+     */
     class MyAdapter extends BaseAdapter {
 
         @Override
