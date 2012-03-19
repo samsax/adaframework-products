@@ -79,8 +79,6 @@ public class EditProductActivity extends Activity {
         String newName = name.getText().toString();
         if (newName.trim().length() == 0) {
             Toast.makeText(this, "El nombre no puede estar vacío", Toast.LENGTH_SHORT).show();
-        //} else if (product.getCategory() == null) {
-          //  Toast.makeText(this, "Debe seleccionar alguna categoría", Toast.LENGTH_SHORT).show();            
         } else {
             // Guardamos los nuevos datos
             product.setName(newName);
