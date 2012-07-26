@@ -23,9 +23,9 @@ import com.desandroid.framework.ada.annotations.TableField;
 public class Category extends Entity {
 
     @TableField(name = "name", datatype = DATATYPE_TEXT, required = true)
-    public String name;
+    private String name;
     @TableField(name = "description", datatype = DATATYPE_TEXT, required = false)
-    public String description;
+    private String description;
 
     public Category() {
         super();
