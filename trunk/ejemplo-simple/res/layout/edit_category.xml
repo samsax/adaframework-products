@@ -18,7 +18,7 @@
     android:layout_height="fill_parent" >
 
     <LinearLayout
-        android:id="@+id/buttons"
+        android:id="@+id/botones"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -44,7 +44,7 @@
     <LinearLayout 
 	    android:layout_width="fill_parent"
 	    android:layout_height="fill_parent"
-	    android:layout_above="@+id/buttons"
+	    android:layout_above="@+id/botones"
 	    android:orientation="vertical" >
 	
 	    <TextView
