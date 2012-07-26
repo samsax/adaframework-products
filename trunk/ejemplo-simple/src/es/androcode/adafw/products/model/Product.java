@@ -23,15 +23,15 @@ import com.desandroid.framework.ada.annotations.TableField;
 public class Product extends Entity {
 
     @TableField(name = "name", datatype = DATATYPE_TEXT, required = true)
-    public String name;
+    private String name;
     @TableField(name = "category", datatype = DATATYPE_ENTITY_REFERENCE, required = false)
-    public Category category;
+    private Category category;
     @TableField(name = "quantity_per_unit", datatype = DATATYPE_INTEGER, required = true)
-    public int quantityPerUnit;
+    private int quantityPerUnit;
     @TableField(name = "unit_price", datatype = DATATYPE_DOUBLE, required = true)
-    public double unitPrice;
+    private double unitPrice;
     @TableField(name = "units_in_stock", datatype = DATATYPE_INTEGER, required = true)
-    public int unitsInStock;
+    private int unitsInStock;
 
     public Product() {
         super();
