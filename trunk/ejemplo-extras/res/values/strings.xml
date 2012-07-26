@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+  A project sample for AdaFramework (http://www.adaframework.com/)
+  
+  Copyright (C) 2012 Androcode
+  <http://www.androcode.es>
+  
+  This project is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or 
+  (at your option) any later version.
+  
+  You should have received a copy of the GNU General Public License
+  along with this project.  If not, see <http://www.gnu.org/licenses/>.
+ -->
+<resources>
+
+    <string name="app_name">adaframework-extras</string>
+    
+    <string name="categories">Categories</string>
+    <string name="products">Products</string>
+    
+    <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
+    
+    <string name="name">Name</string>
+    <string name="description">Description</string>
+    <string name="quantity_per_unit">Quantity per unit</string>
+    <string name="unit_price">Unit price</string>
+    <string name="stock">Stock</string>
+    
+    <string name="new_product">New product</string>
+    <string name="edit_product">Edit product</string>
+    
+    <string name="new_category">New category</string>
+    <string name="edit_category">Edit category</string>
+    
+    <string name="no_category">&lt;No category selected></string>
+    <string name="without_category">No category</string>
+    
+    <string name="errors">Errors</string>
+    <string name="error_empty_name">The name cannont be empty</string>
+    <string name="error_quantity_range">The quantity value must be between 1 and 9999</string>
+    <string name="error_price">The priace value is not valid</string>
+
+</resources>
